@@ -2,26 +2,54 @@ body {
   display: grid;
   height: 100vh;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: .4fr .2fr 1.5fr 1.5fr;
+  grid-template-rows: .6fr .2fr 1.5fr 1.5fr;
   grid-template-areas:
     "nav nav nav nav"
-    "h1 h1 h1 h1"
+    "h3 h3 h3 h3"
     "card1 card2 card3 card4"
     "card5 card6 card7 card8";
   grid-gap: 1rem;
 }
 
 .cards {
-  /* width: 20rem; */
 }
+
+
 nav {
+  display: flex;
+  justify-content: space-between;
   background-color: green;
   grid-area: nav;
 }
 
-h1 {
+.nav-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 30%;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  width: 12%;
+}
+
+.nav-upper-right {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bottom-right  {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3 {
   background-color: yellow;
-  grid-area: h1;
+  grid-area: h3;
 }
 
 #card1 {
