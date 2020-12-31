@@ -1,15 +1,19 @@
 body {
   display: grid;
   height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: .4fr .2fr 1.5fr 1.5fr;
   grid-template-areas:
     "nav nav nav nav"
     "h1 h1 h1 h1"
     "card1 card2 card3 card4"
-    "card5 card6 card7 card8"
+    "card5 card6 card7 card8";
+  grid-gap: 1rem;
 }
 
+.cards {
+  /* width: 20rem; */
+}
 nav {
   background-color: green;
   grid-area: nav;
@@ -59,4 +63,23 @@ h1 {
 #card8 {
   background-color: pink;
   grid-area: card8;
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    height: 200vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr;
+    grid-template-areas:
+    "nav"
+    "h1"
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8"
+  }
 }
