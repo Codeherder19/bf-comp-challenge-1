@@ -1,0 +1,161 @@
+body {
+  display: grid;
+  /* align-self: center; */
+  height: 100vh;
+  /* width: 80vw; */
+  /* margin-left: 10%; */
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: .6fr .2fr 1.5fr 1.5fr;
+  grid-template-areas:
+    "nav nav nav nav"
+    "h3 h3 h3 h3"
+    "card1 card2 card3 card4"
+    "card5 card6 card7 card8";
+  grid-gap: 1rem;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: solid black;
+}
+
+.web-address-container {
+  display: flex;
+  height: 25%;
+  background-color: #D6DBDF;
+}
+
+.name,
+.playlist,
+.attachments {
+  margin-bottom: 0%;
+}
+
+.timestamp,
+.playlist-name,
+.number-of-attachments {
+  margin-top: 0%;
+}
+
+.web-address {
+  font-size: 80%;
+  margin: 0%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: green;
+  grid-area: nav;
+}
+
+.nav-left {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  width: 30%;
+}
+
+.nav-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  width: 12%;
+}
+
+.nav-upper-right {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-bottom-right  {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3 {
+  font-size: 200%;
+  margin: 0%;
+  grid-area: h3;
+}
+
+#card1 {
+  /* background-color: blue; */
+  grid-area: card1;
+}
+
+#card2 {
+  /* background-color: purple; */
+  grid-area: card2;
+}
+
+#card3 {
+  /* background-color: beige; */
+  grid-area: card3;
+
+}
+
+#card4 {
+  /* background-color: orange; */
+  grid-area: card4;
+}
+
+#card5 {
+  /* background-color: green; */
+  grid-area: card5;
+}
+
+#card6 {
+  /* background-color: red; */
+  grid-area: card6;
+}
+
+#card7 {
+  /* background-color: gold; */
+  grid-area: card7;
+}
+
+#card8 {
+  /* background-color: pink; */
+  grid-area: card8;
+}
+
+.card-top-section {
+  display: flex;
+  justify-content: space-between;
+  background-color: grey;
+  height: 30%;
+  width: 100%;
+}
+
+.card-bottom-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 550px) {
+  body {
+    height: 200vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr 1.4fr;
+    grid-template-areas:
+    "nav"
+    "h1"
+    "card1"
+    "card2"
+    "card3"
+    "card4"
+    "card5"
+    "card6"
+    "card7"
+    "card8"
+  }
+}
